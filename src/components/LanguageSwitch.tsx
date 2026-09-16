@@ -1,5 +1,7 @@
+import type { Lang } from "../types/i18n";
+
 interface Props {
-  current: "ru" | "en";
+  current: Lang;
   label: string;
 }
 

@@ -1,12 +1,8 @@
 import { useState } from "react";
-
-interface Item {
-  q: string;
-  a: string;
-}
+import type { FaqItem } from "../types/faq";
 
 interface Props {
-  items: Item[];
+  items: FaqItem[];
 }
 
 export default function Faq({ items }: Props) {

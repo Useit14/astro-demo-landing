@@ -1,4 +1,4 @@
-import type { Dict } from "./ru";
+import type { Dict } from "../types/i18n";
 
 export const en: Dict = {
   lang: "en",

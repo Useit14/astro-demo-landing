@@ -1,4 +1,7 @@
-export const ru = {
+import type { Dict } from "../types/i18n";
+
+
+export const ru: Dict = {
   lang: "ru",
   switchLabel: "EN",
   nav: { home: "Главная", features: "Возможности", faq: "FAQ", contact: "Контакты" },
@@ -18,5 +21,3 @@ export const ru = {
   modal: { title: "Привет!", body: "Это React-остров, гидрированный на клиенте.", close: "Закрыть" },
   footer: "Собрано на Astro + React + Tailwind",
 };
-
-export type Dict = typeof ru;
