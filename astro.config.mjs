@@ -9,7 +9,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://astro-demo-landing.netlify.app',
+  site: 'https://keen-sorbet-9655c5.netlify.app',
 
   vite: {
     plugins: [tailwindcss()]
