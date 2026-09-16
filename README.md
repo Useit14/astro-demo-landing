@@ -7,7 +7,7 @@
 
 ## Демо
 
-- **Живая версия:** https://astro-demo-landing.netlify.app
+- **Живая версия:** https://keen-sorbet-9655c5.netlify.app
 - **Репозиторий:** https://github.com/Useit14/astro-demo-landing
 
 ## Что демонстрирует проект
