@@ -1,0 +1,33 @@
+---
+import Base from "../../layouts/Base.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import Faq from "../../components/Faq.tsx";
+import Modal from "../../components/Modal.tsx";
+import { en as dict } from "../../i18n/en";
+---
+
+<Base title={dict.hero.title} lang={dict.lang}>
+  <Header dict={dict} />
+
+  <main class="mx-auto max-w-5xl px-4">
+    <section class="py-20 text-center">
+      <h1 class="mb-4 text-4xl font-bold md:text-5xl">{dict.hero.title}</h1>
+      <p class="mb-8 text-slate-400">{dict.hero.subtitle}</p>
+      <Modal
+        trigger={dict.hero.cta}
+        title={dict.modal.title}
+        body={dict.modal.body}
+        close={dict.modal.close}
+        client:idle
+      />
+    </section>
+
+    <section id="faq" class="py-16">
+      <h2 class="mb-6 text-2xl font-semibold">{dict.faq.title}</h2>
+      <Faq items={dict.faq.items} client:visible />
+    </section>
+  </main>
+
+  <Footer text={dict.footer} />
+</Base>
