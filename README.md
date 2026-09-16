@@ -21,28 +21,44 @@
 - **Производительность** — минимум JS на клиенте, статика, zero-JS для статичных частей
 
 ## Структура
+
+```
 src/
-├── components/ UI-компоненты
-│ ├── Header.astro → статичный хедер (Astro)
-│ ├── Footer.astro → статичный футер (Astro)
-│ ├── LanguageSwitch.tsx → React-остров, client:load
-│ ├── Faq.tsx → React-остров, client:visible
-│ └── Modal.tsx → React-остров, client:idle
+├── components/
+│   ├── Header.astro
+│   ├── Footer.astro
+│   ├── LanguageSwitch.tsx
+│   ├── Faq.tsx
+│   └── Modal.tsx
 ├── i18n/
-│ ├── ru.ts → русский словарь
-│ └── en.ts → английский словарь
+│   ├── ru.ts
+│   └── en.ts
 ├── types/
-│ ├── i18n.ts → Lang, Dict
-│ └── faq.ts → FaqItem
+│   ├── i18n.ts
+│   └── faq.ts
 ├── layouts/
-│ └── Base.astro → общий layout + <head>, SEO
+│   └── Base.astro
 ├── pages/
-│ ├── index.astro → редирект на /ru/
-│ ├── 404.astro
-│ ├── ru/index.astro → русская версия
-│ └── en/index.astro → английская версия
+│   ├── index.astro
+│   ├── 404.astro
+│   ├── ru/
+│   │   └── index.astro
+│   └── en/
+│       └── index.astro
 └── styles/
-└── global.css → Tailwind-директивы
+    └── global.css
+```
+
+### Назначение папок
+
+| Путь | Что внутри |
+|---|---|
+| `components/` | UI-компоненты: Astro (Header, Footer) и React-острова (LanguageSwitch, Faq, Modal) |
+| `i18n/` | Словари локализации RU/EN |
+| `types/` | Общие TypeScript-типы (Lang, Dict, FaqItem) |
+| `layouts/` | Общий layout с `<head>` и SEO-тегами |
+| `pages/` | Файловый роутинг: страницы и 404 |
+| `styles/` | Глобальные стили и директивы Tailwind |
 
 ## Стек
 
